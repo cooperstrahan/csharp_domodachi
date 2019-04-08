@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojodachi</title>
+</head>
+<body>
+    @model Dojo
+    <p>The Dojodachi has Fullness: @Model.Fullness Happiness: @Model.Happiness Meals: @Model.Meals Energy: @Model.Energy</p>
+    <p>@Model.Status</p>
+    
+    @{
+        if(!@Model.isDead)
+        {
+            <a href="/feed"><button>Feed</button></a>
+            <a href="/play"><button>Play</button></a>
+            <a href="/work"><button>Work</button></a>
+            <a href="/sleep"><button>Sleep</button></a>
+            
+        }
+        else
+        {
+            <a href="/reset"><button>Reset</button></a>
+        }
+    }
+</body>
+</html>
